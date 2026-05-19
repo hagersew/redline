@@ -50,7 +50,7 @@ export function HowItWorks() {
               <Heading as="h2" size="xl" letterSpacing="-0.02em">
                 How it works
               </Heading>
-              <Text color="gray.600" maxW="lg" fontSize="lg">
+              <Text color="text.muted" maxW="lg" fontSize="lg">
                 Three steps from install to instant layout X-ray on any page.
               </Text>
             </VStack>
@@ -91,10 +91,10 @@ export function HowItWorks() {
                           align="flex-start"
                           spacing={4}
                           p={6}
-                          bg="white"
+                          bg="card.bg"
                           borderRadius="xl"
                           border="1px solid"
-                          borderColor="gray.100"
+                          borderColor="border.subtle"
                           boxShadow="sm"
                           h="full"
                           position="relative"
@@ -119,7 +119,7 @@ export function HowItWorks() {
                           <Heading as="h3" size="md">
                             {step.title}
                           </Heading>
-                          <Text color="gray.600" lineHeight="tall">
+                          <Text color="text.muted" lineHeight="tall">
                             {step.description}
                           </Text>
                         </VStack>

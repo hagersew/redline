@@ -17,6 +17,18 @@
     <title>Redline — outline every element on any page</title>
   </head>
   <body>
+    <script>
+      (function () {
+        var mode = localStorage.getItem("chakra-ui-color-mode");
+        if (!mode) {
+          localStorage.setItem("chakra-ui-color-mode", "dark");
+          mode = "dark";
+        }
+        if (mode === "dark") {
+          document.documentElement.style.colorScheme = "dark";
+        }
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

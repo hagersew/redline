@@ -227,7 +227,7 @@ export function DemoPreview() {
               <Heading as="h2" size="lg" letterSpacing="-0.02em">
                 See it in action
               </Heading>
-              <Text color="gray.600">
+              <Text color="text.muted">
                 Click Run Redline to preview the 1px red outline on every element.
               </Text>
             </VStack>
@@ -236,9 +236,9 @@ export function DemoPreview() {
               borderRadius="xl"
               overflow="hidden"
               border="1px solid"
-              borderColor="gray.200"
+              borderColor="border.default"
               boxShadow="0 20px 50px rgba(0, 0, 0, 0.08)"
-              bg="gray.100"
+              bg="card.muted"
               initial={reduceMotion ? false : "hidden"}
               whileInView={reduceMotion ? undefined : "visible"}
               viewport={{ once: true, margin: "-60px" }}
@@ -253,9 +253,9 @@ export function DemoPreview() {
                 gap={3}
                 px={4}
                 py={3}
-                bg="gray.200"
+                bg="border.default"
                 borderBottom="1px solid"
-                borderColor="gray.300"
+                borderColor="border.default"
               >
                 <Flex gap={1.5}>
                   {["#ff5f57", "#febc2e", "#28c840"].map((color, i) => (
@@ -272,12 +272,12 @@ export function DemoPreview() {
                 </Flex>
                 <Box
                   flex={1}
-                  bg="white"
+                  bg="card.bg"
                   px={3}
                   py={1}
                   borderRadius="md"
                   fontSize="xs"
-                  color="gray.500"
+                  color="text.subtle"
                   fontFamily="mono"
                   overflow="hidden"
                 >

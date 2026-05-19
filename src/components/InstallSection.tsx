@@ -43,10 +43,10 @@ export function InstallSection() {
         <SectionReveal variant="scale">
           <MotionBox
             p={{ base: 8, md: 12 }}
-            bg="white"
+            bg="card.bg"
             borderRadius="2xl"
             border="1px solid"
-            borderColor="gray.200"
+            borderColor="border.default"
             boxShadow="lg"
             position="relative"
             overflow="hidden"
@@ -73,7 +73,7 @@ export function InstallSection() {
                 <Heading as="h2" size="xl" letterSpacing="-0.02em">
                   Install Redline
                 </Heading>
-                <Text color="gray.600" maxW="lg" fontSize="lg">
+                <Text color="text.muted" maxW="lg" fontSize="lg">
                   Prefer drag-and-drop? Use the red button in the hero. Or pick
                   one of these options.
                 </Text>
@@ -103,7 +103,7 @@ export function InstallSection() {
                 </SimpleGrid>
               </StaggerReveal>
 
-              <Text fontSize="sm" color="gray.500" textAlign="center">
+              <Text fontSize="sm" color="text.subtle" textAlign="center">
                 After saving, open any site and click Redline from your bookmarks
                 bar. Run it twice to turn red outlines off.
               </Text>

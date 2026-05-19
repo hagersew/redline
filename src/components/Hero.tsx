@@ -110,7 +110,7 @@ export function Hero() {
           <MotionBox variants={reduceMotion ? undefined : fadeUp}>
             <Text
               fontSize={{ base: "lg", md: "xl" }}
-              color="gray.600"
+              color="text.muted"
               maxW="2xl"
               lineHeight="tall"
             >
@@ -173,7 +173,7 @@ export function Hero() {
                   Drag Redline to bookmarks bar
                 </Button>
               </MotionBox>
-              <Text fontSize="sm" color="gray.500" maxW="md">
+              <Text fontSize="sm" color="text.subtle" maxW="md">
                 Drag to install—don&apos;t left-click. Most browsers block{" "}
                 <Text as="span" fontFamily="mono" fontSize="xs">
                   javascript:

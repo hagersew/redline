@@ -38,7 +38,7 @@ export function Features() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <Box as="section" py={{ base: 16, md: 24 }} bg="white" position="relative" overflow="hidden">
+    <Box as="section" py={{ base: 16, md: 24 }} bg="section.alt" position="relative" overflow="hidden">
       {!reduceMotion && (
         <MotionBox
           position="absolute"
@@ -60,7 +60,7 @@ export function Features() {
               <Heading as="h2" size="xl" letterSpacing="-0.02em">
                 Why developers use Redline
               </Heading>
-              <Text color="gray.600" maxW="lg" fontSize="lg">
+              <Text color="text.muted" maxW="lg" fontSize="lg">
                 A lightweight overlay for layout debugging on any site, any time.
               </Text>
             </VStack>
@@ -86,10 +86,10 @@ export function Features() {
                         align="flex-start"
                         spacing={4}
                         p={8}
-                        bg="gray.50"
+                        bg="card.muted"
                         borderRadius="xl"
                         border="1px solid"
-                        borderColor="gray.100"
+                        borderColor="border.subtle"
                         h="full"
                       >
                         <MotionText
@@ -110,7 +110,7 @@ export function Features() {
                         <Heading as="h3" size="md">
                           {feature.title}
                         </Heading>
-                        <Text color="gray.600" lineHeight="tall">
+                        <Text color="text.muted" lineHeight="tall">
                           {feature.description}
                         </Text>
                       </VStack>

@@ -8,6 +8,7 @@ import {
 } from "@chakra-ui/react";
 import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 const MotionBox = motion(Box);
 const MotionFlex = motion(Flex);
 
@@ -33,10 +34,10 @@ export function Header() {
       position="sticky"
       top={0}
       zIndex={100}
-      bg={scrolled ? "rgba(250, 250, 250, 0.85)" : "transparent"}
+      bg={scrolled ? "header.bg" : "transparent"}
       backdropFilter={scrolled ? "blur(12px)" : "none"}
       borderBottom="1px solid"
-      borderColor={scrolled ? "gray.200" : "transparent"}
+      borderColor={scrolled ? "border.default" : "transparent"}
       initial={reduceMotion ? false : { y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
@@ -77,7 +78,7 @@ export function Header() {
               </Heading>
             </MotionFlex>
           </Link>
-          <HStack spacing={6} display={{ base: "none", sm: "flex" }}>
+          <HStack spacing={4} display={{ base: "none", sm: "flex" }}>
             {navLinks.map((link, i) => (
               <MotionBox
                 key={link.href}
@@ -89,7 +90,7 @@ export function Header() {
                   href={link.href}
                   fontSize="sm"
                   fontWeight="medium"
-                  color="gray.600"
+                  color="text.muted"
                   position="relative"
                   _hover={{ color: "red.500", textDecoration: "none" }}
                   sx={{
@@ -114,7 +115,11 @@ export function Header() {
                 </Link>
               </MotionBox>
             ))}
+            <ThemeSwitcher />
           </HStack>
+          <Box display={{ base: "flex", sm: "none" }}>
+            <ThemeSwitcher />
+          </Box>
         </Flex>
       </Container>
     </MotionBox>

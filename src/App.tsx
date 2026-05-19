@@ -10,7 +10,7 @@ import { InstallSection } from "./components/InstallSection";
 
 export default function App() {
   return (
-    <Box as="main" minH="100vh" bg="gray.50" position="relative">
+    <Box as="main" minH="100vh" bg="page.bg" position="relative">
       <AnimatedBackground />
       <Box position="relative" zIndex={1}>
         <Header />
